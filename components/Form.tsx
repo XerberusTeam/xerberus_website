@@ -172,10 +172,10 @@ function Form() {
   };
 
   return (
-    <div className="relative max-w-[1240px] m-auto p-4">
+    <div className="relative max-w-[1240px] m-auto p-4 mb-44">
       {submitted && (
         <div className="overlay">
-          <p className="text-red-100  bg-white text-7xl -rotate-12">
+          <p className="text-red-100 text-center shadow-lg bg-white text-5xl sm:text-7xl -rotate-12">
             XERBERUS IS NOW WATCHING
           </p>
         </div>
