@@ -15,6 +15,13 @@ function Hero() {
             </button>
           </a>
         </Link>
+        <Link href="https://drive.google.com/file/d/1hE8EwQAeC8Dspka8DN3HRmcuBJAqnRMM/view">
+          <a target="_blank">
+            <button className="px-8 py-2 mt-5 border w-full bg-transparent text-white text-2xl font-bold">
+              Light Paper 001
+            </button>
+          </a>
+        </Link>
       </div>
     </div>
   );
