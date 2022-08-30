@@ -28,13 +28,15 @@ export default async function handler(
   }
 
   const body = req.body as SheetForm;
-  console.log("body: " + body);
   try {
     // prepare auth
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY,
+        private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY?.replace(
+          /\\n/g,
+          "\n"
+        ),
       },
       scopes: [
         "https://www.googleapis.com/auth/drive",
@@ -42,13 +44,11 @@ export default async function handler(
         "https://www.googleapis.com/auth/spreadsheets",
       ],
     });
-    console.log("auth: " + auth);
 
     const sheets = google.sheets({
       auth,
       version: "v4",
     });
-    console.log("sheets: " + sheets);
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
@@ -76,7 +76,6 @@ export default async function handler(
         ],
       },
     });
-    console.log("response api: " + response);
 
     return res.status(200).json({
       data: response.data,

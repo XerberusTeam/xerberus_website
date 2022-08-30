@@ -2,7 +2,7 @@ import React from "react";
 
 function Info() {
   return (
-    <div className="flex flex-col items-center justify-center  m-10 lg:m-20 h-screen">
+    <div className="flex flex-col items-center justify-center  m-10 lg:m-20 py-10">
       <h2 className="text-2xl lg:text-3xl font-bold uppercase">
         Protect your bags
       </h2>

@@ -14,3 +14,16 @@ html {
 .xrb-logo {
   background-image: url(../public/logo.png);
 }
+
+.c-red {
+  border: 5px solid red;
+}
+.c-blue {
+  border: 5px solid blue;
+}
+.c-green {
+  border: 5px solid green;
+}
+.c-yellow {
+  border: 5px solid yellow;
+}

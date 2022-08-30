@@ -53,7 +53,6 @@ function Form() {
       agix,
       dana,
     };
-    console.log("form: " + form.email + form.wmt + form.hosky);
 
     const response = await fetch("/api/submit", {
       method: "POST",
@@ -63,10 +62,8 @@ function Form() {
       },
       body: JSON.stringify(form),
     });
-    console.log("response form: " + response);
 
     const content = await response.json();
-    console.log("content form: " + content);
     alert("Thank you for your submission");
 
     setEmail("");
@@ -189,9 +186,9 @@ function Form() {
           placeholder="Email"
           className="border shadow-lg p-3 w-full my-6"
         />
-        <div className="flex flex-wrap my-6 ml-12 space-x-4 space-y-4">
+        <div className="flex flex-wrap my-6 sm:pl-12 space-x-4 space-y-4 justify-center sm:justify-start ">
           <div></div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("wmt")}
               type="checkbox"
@@ -257,7 +254,7 @@ function Form() {
               </defs>
             </svg>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("hosky")}
               type="checkbox"
@@ -276,7 +273,7 @@ function Form() {
               sizes="(max-width: 300px) 100vw, 300px"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("min")}
               type="checkbox"
@@ -293,7 +290,7 @@ function Form() {
               alt="@minswap"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("charli")}
               type="checkbox"
@@ -343,14 +340,14 @@ function Form() {
               ></ellipse>
             </svg>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("wing")}
               type="checkbox"
               value="wing"
               className="mx-2"
             />
-            Wing Riders
+            WingRiders
             <svg
               width="25"
               height="25"
@@ -365,7 +362,7 @@ function Form() {
               ></path>
             </svg>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("sundae")}
               type="checkbox"
@@ -401,7 +398,7 @@ function Form() {
               ></path>
             </svg>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("meld")}
               type="checkbox"
@@ -418,7 +415,7 @@ function Form() {
               alt="@MELD-labs"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("vyfi")}
               type="checkbox"
@@ -435,7 +432,7 @@ function Form() {
               className="mx-1.5 mb-1"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("xray")}
               type="checkbox"
@@ -491,7 +488,7 @@ function Form() {
               </g>
             </svg>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("drip")}
               type="checkbox"
@@ -507,7 +504,7 @@ function Form() {
               alt=""
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center justify-left">
             <input
               onChange={() => handleCheckbox("emp")}
               type="checkbox"
@@ -524,7 +521,7 @@ function Form() {
               className="mx-1.5 mb-1"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("milk")}
               type="checkbox"
@@ -540,7 +537,7 @@ function Form() {
               src="https://avatars.githubusercontent.com/u/91151317?v=4"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("agix")}
               type="checkbox"
@@ -557,7 +554,7 @@ function Form() {
               className="mx-1.5 mb-1"
             ></img>
           </div>
-          <div className="w-[30%] flex items-center">
+          <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
               onChange={() => handleCheckbox("dana")}
               type="checkbox"
