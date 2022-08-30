@@ -25,7 +25,7 @@ function Navbar() {
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
       <div className="max-w-[1240px] flex justify-start items-center p-4 text-white">
-        <div className="w-[4%] h-[4%] mr-4">
+        <div className="w-[10%] h-[10%] sm:w-[5%] sm:h-[5%] mr-4">
           <Image
             src="/logo.png"
             alt="/"
