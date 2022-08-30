@@ -33,6 +33,8 @@ function Form() {
   const [checkAgix, setCheckAgix] = useState(true);
   const [checkDana, setCheckDana] = useState(true);
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -63,9 +65,6 @@ function Form() {
       body: JSON.stringify(form),
     });
 
-    const content = await response.json();
-    alert("Thank you for your submission");
-
     setEmail("");
     setWmt("");
     setHosky("");
@@ -81,6 +80,8 @@ function Form() {
     setMilk("");
     setAgix("");
     setDana("");
+
+    setSubmitted(true);
   };
 
   const handleCheckbox = (data: string) => {
@@ -171,7 +172,14 @@ function Form() {
   };
 
   return (
-    <div className="max-w-[1240px] m-auto p-4 h-screen">
+    <div className="relative max-w-[1240px] m-auto p-4">
+      {submitted && (
+        <div className="overlay">
+          <p className="text-red-100  bg-white text-7xl -rotate-12">
+            XERBERUS IS NOW WATCHING
+          </p>
+        </div>
+      )}
       <h1 className="text-2xl lg:text-3xl font-bold text-center p-4 uppercase">
         Join the Wallet Watcher - Alpha
       </h1>
@@ -186,7 +194,7 @@ function Form() {
           placeholder="Email"
           className="border shadow-lg p-3 w-full my-6"
         />
-        <div className="flex flex-wrap my-6 sm:pl-12 space-x-4 space-y-4 justify-center sm:justify-start ">
+        <div className="flex flex-wrap my-6 sm:pl-12 space-x-4 space-y-4 justify-center sm:justify-start">
           <div></div>
           <div className="w-[50%] sm:w-[30%] flex items-center">
             <input
