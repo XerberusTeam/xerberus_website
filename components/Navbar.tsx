@@ -36,7 +36,7 @@ function Navbar() {
         </div>
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-            Xerberus.io
+            Xer<span style={{ color: "#ff0000" }}>berus</span>.io
           </h1>
         </Link>
       </div>

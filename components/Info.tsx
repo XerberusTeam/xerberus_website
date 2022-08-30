@@ -15,7 +15,7 @@ function Info() {
         to see in our ecosystem.
       </p>
       <h2 className="text-2xl lg:text-3xl font-bold uppercase pt-10">
-        How do the alerts work?
+        How do the <span style={{ color: "#ff0000" }}>alerts</span> work?
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
         <div className="flex flex-col text-center px-2">
