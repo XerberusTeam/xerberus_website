@@ -193,6 +193,7 @@ function Form() {
           type="email"
           placeholder="Email"
           className="border shadow-lg p-3 w-full my-6"
+          required
         />
         <div className="flex flex-wrap my-6 sm:pl-12 space-x-4 space-y-4 justify-center sm:justify-start">
           <div></div>
