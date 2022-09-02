@@ -29,6 +29,18 @@ export const options = {
       text: "Wallet Watcher",
     },
   },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+    },
+    y: {
+      grid: {
+        display: false,
+      },
+    },
+  },
 };
 
 const labels = [
