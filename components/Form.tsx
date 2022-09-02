@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Form() {
   const [email, setEmail] = useState("");
@@ -38,6 +39,8 @@ function Form() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const target = e.target as HTMLFormElement;
+
     const form = {
       email,
       wmt,
@@ -64,6 +67,18 @@ function Form() {
       },
       body: JSON.stringify(form),
     });
+
+    emailjs
+      .sendForm(
+        "service_why93i4",
+        "template_4shtaxf",
+        target,
+        "unMwOkUlAaPG26ez3"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
 
     setEmail("");
     setWmt("");
@@ -191,6 +206,7 @@ function Form() {
           onChange={(e) => setEmail(e.target.value)}
           id="email"
           type="email"
+          name="usermail"
           placeholder="Email"
           className="border shadow-lg p-3 w-full my-6"
           required
