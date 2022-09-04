@@ -17,6 +17,13 @@ type SheetForm = {
   milk: string;
   agix: string;
   dana: string;
+  ctosi: string;
+  audit: string;
+  newm: string;
+  ibile: string;
+  stripper: string;
+  cardax: string;
+  resi: string;
 };
 
 export default async function handler(
@@ -72,6 +79,13 @@ export default async function handler(
             body.milk,
             body.agix,
             body.dana,
+            body.ctosi,
+            body.audit,
+            body.newm,
+            body.ibile,
+            body.stripper,
+            body.cardax,
+            body.resi,
           ],
         ],
       },

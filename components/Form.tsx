@@ -18,6 +18,13 @@ function Form() {
   const [milk, setMilk] = useState("");
   const [agix, setAgix] = useState("");
   const [dana, setDana] = useState("");
+  const [ctosi, setCtosi] = useState("");
+  const [audit, setAudit] = useState("");
+  const [newm, setNewm] = useState("");
+  const [ibile, setIbile] = useState("");
+  const [stripper, setStripper] = useState("");
+  const [cardax, setCardax] = useState("");
+  const [resi, setResi] = useState("");
 
   const [checkWmt, setCheckWmt] = useState(true);
   const [checkHosky, setCheckHosky] = useState(true);
@@ -33,6 +40,13 @@ function Form() {
   const [checkMilk, setCheckMilk] = useState(true);
   const [checkAgix, setCheckAgix] = useState(true);
   const [checkDana, setCheckDana] = useState(true);
+  const [checkCtosi, setCheckCtosi] = useState(true);
+  const [checkAudit, setCheckAudit] = useState(true);
+  const [checkNewm, setCheckNewm] = useState(true);
+  const [checkIbile, setCheckIbile] = useState(true);
+  const [checkStripper, setCheckStripper] = useState(true);
+  const [checkCardax, setCheckCardax] = useState(true);
+  const [checkResi, setCheckResi] = useState(true);
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -57,6 +71,13 @@ function Form() {
       milk,
       agix,
       dana,
+      ctosi,
+      audit,
+      newm,
+      ibile,
+      stripper,
+      cardax,
+      resi,
     };
 
     const response = await fetch("/api/submit", {
@@ -95,6 +116,13 @@ function Form() {
     setMilk("");
     setAgix("");
     setDana("");
+    setCtosi("");
+    setAudit("");
+    setNewm("");
+    setIbile("");
+    setStripper("");
+    setCardax("");
+    setResi("");
 
     setSubmitted(true);
   };
@@ -183,6 +211,48 @@ function Form() {
       }
       setCheckDana(!checkDana);
       setDana("OK");
+    }
+    if (data == "ctosi") {
+      if (checkCtosi == true) {
+      }
+      setCheckCtosi(!checkCtosi);
+      setCtosi("OK");
+    }
+    if (data == "audit") {
+      if (checkAudit == true) {
+      }
+      setCheckAudit(!checkAudit);
+      setAudit("OK");
+    }
+    if (data == "newm") {
+      if (checkNewm == true) {
+      }
+      setCheckNewm(!checkNewm);
+      setNewm("OK");
+    }
+    if (data == "ibile") {
+      if (checkIbile == true) {
+      }
+      setCheckIbile(!checkIbile);
+      setIbile("OK");
+    }
+    if (data == "stripper") {
+      if (checkStripper == true) {
+      }
+      setCheckStripper(!checkStripper);
+      setStripper("OK");
+    }
+    if (data == "cardax") {
+      if (checkCardax == true) {
+      }
+      setCheckCardax(!checkCardax);
+      setCardax("OK");
+    }
+    if (data == "resi") {
+      if (checkResi == true) {
+      }
+      setCheckResi(!checkResi);
+      setResi("OK");
     }
   };
 
@@ -593,6 +663,125 @@ function Form() {
               height="25"
               draggable="true"
               src="https://pbs.twimg.com/profile_images/1403998865083228163/nwXSdRDL_400x400.jpg"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("ctosi")}
+              type="checkbox"
+              value="ctosi"
+              className="mx-2"
+            />
+            CTOSI
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABjUExURUxpcRcRYxkSYxYPXxUPYBkTYxUPYhUOXxsTZBkTYhgRYxoTYxsUZO3i0UdQui4xkh0XaNjOxiUhdkA4eCgmgCwtiiQebkJKsj1DqTg8nsC2uoZ9nFVNgqOZq+XazW1kjzM1lJRz+cwAAAARdFJOUwBr1E8zvRgG8aCH5f/////+9zFs+gAAHVxJREFUeNrsXdtiozoMPLnQJgQWY4O35br//5WHXrfdSGCMLUPRvO42sa3xaCQb8t9/DAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYGwT5zi6icvxenrktdghTlHygduBKbA3PMbJV0QPvCS7wkOUfMftzIuyp/1/TP7FhRmwI1yTe9w4C+zH/icQYl6YPQvAIAFcCuzFAQqQAMmBl2YnHQA4/knES7PnDDDkAF6afSBCCJBwHcAEYDABGEwABhOAwQRgMAEYTAAGE4DBBGAwARhMAAYTgMEEYDABGEwABhOAwQRgMAEYW8Djw/l0iONrdDzesPgnl9sxiq7x4XR+eOQ74j8ED+fDEPbbJZmJ2/GVCcyDzW75YccP+3124P+BOA6SMCgCL+imYn+4Lo78Pxj04MQs2ILin65HkXjC7XrgnLDm2MfRJfGNy5FZsMbgH663hA6X6MCvE1hRyo+PCT1uVzYF68j5lyQYWAjCbv1TkK3PQrCS6Ifc+v8KAXOAGOf1RP+tXxTxqwYJo78C5Qcqg+uJQ7Pb6H/6AdYBv4n/sN7ov3MgZjuwm8SPWUJOBX56fVGyFdxibg843/zLTni0mvn3WrMMrAenaEHkm7qt8rSe+3d5V7V139jzgN9B76zjYxd+ofq6zdM3tNh/KiXyL/L9T/Oq7ZW2pAAbQgep3+KUT77s+i79Cyz+usyyAkkOKv/yAfmgBmp+FrqwGVgY/vgye9//3fafqJDQyewFJcaA7p+P6ap6fkpgM7Ak/DP3nKqru+C/xF+PxR9nQAN8lgUJIlYBgqpfNHDwDeI/MAD5Hz38gbNJwCpgsfvn1H2yr7oUQ67gPyqyL0DiWaOfmla1YgqsIvcPup+OoGsM4p9lCN3asY/O20ZwIvDS8b85iv6A3ij+mAaIiY+fwQFx5aLQMPxH87SfTqE2jD/GAD35FXnba9OikClg0PU7mu79PJ0G0gAos8yUAaqb/pbOVAcu3B2cSv5mXT/dV6kJcm26/3EG9GbfZOgJj+wGR9XfyPs1bWcUlLRTE/VfZuIEa7MvSyuzVMBWYFnyV3VlGBCsACgyFGAERWv6hYMlZCtg3/gxUf/GOPpoATASf0QDxIwvNZKBG+eB++1vUPmbZv5RAyjH4o90hdWcr81radAVYBGY7f3NbP+UAdRZZsGAftY3mxQFl5jrga99X7fajxuAqfhnWTG/IwixrxdcD5hv/5vz8CMdIJFldgzQeeqeAiwC79l/Uvzb2eFHrgCUBgSAS4HGYgiTiYDPBwy2v7DY/VgHoMgyawbUFqPIa81OYGH2two/UgEaxh8uBoXVQPKpqvC4bxE4T5h/ZRd+uAKUpvGHSwHVpXYUEBPHA3ve/sJ57scrQJ2Zo1heC5p7gd06gYntL23Dn6YKvAA+gwCZdFELfqHAuAjssyAcP/gRdWcd/3aRAcCNoFowpPHu4HWHXjD24f3eKgC5yACM2IB6waBqwa1h45MfZa/+SAWgs7konVUCRnlgZ+dDo/KvF4UfTAAim4/CbRJ4oYDiNGAg/02+KP5gAigsCADagHrR2NLRPLCbNDDa/Fm4/eEzAG0TfzAJ6GXsHBeBnTSFxqo/0S9cYLAFIDI7FA6bAX8zlN55U+h0cd/4+4LG9gjItBuwVKHSvNn1AWHsp/Qfc4DSNv5gElAOBql3awTGbn072P5pLt0lACwJ1A6GOSICt59sBB6OXrc/3AIoFxAASgLCAVHHROAHN4bP+NG/dLGqaS5cJgDsZLh3MlRcBMRPtYIj9q/JXSwqJABiWfyhJCCcDLYbeW1V/DO7f8Jb7T9yDaxcSACoHdQ4Gq7aVVcw9ur+sBJQLo0/WAk4ImzX7KgYuPqW/2FHJR4EAPSBqnM0ZLw1fPxZDHi8+pZ/+B7ocgGAfWDtatB4GvhRDHiMvMs/eAggXMQfSgI6d0bbZgcNAbz940z+h5XUXhIA4gOdSUCKv8T28lMYgLd/HC4j1ATWbuIPSYByOXL9sxmAxt9d+ocvggpHAgD6QJdjR43Aj2gKovGXVepXAGTmDPc+UHcOB48aAXH6ufFXeepXAJLSHQGk3/SFvsxu+wxA2/+N2/j7FQBQAtxOAOsIbJwBDzcC+weXAMJl/KEjAcdTwN5ovGkGYPovWreLBwlA4ZQAgASolIYBG3aCZPEHTgHcCgAoARUVA7ZaDWL9P+165aBTAMcCAElA43oa2B2BjfYEsfjLPN2eAJBIAFoOblID6PZ/mnsuAcgkAGXAbYMnQ1eK9g9WRLsXAEgCREXGgO2dDcYk7R/sWZDCAwEACejdTwa7KRZt7I7QAWn/dO6XDDhO8yEAoATkJNPZIANOdPsfagJ5EQBIAmoP88Hawtctxf9C0f5Fm0B+BACSAOVjQpgGbIcB5wud/kM1oPREgIygEkQfcBuwlecFkAagp/gDD4OUvgggKWwgrgFiG+0ApAHgJf+Da6V9xR+4GiQ8zarfcDvgShp/4IUghTcCABJQp5QM2EI7AC4AVedpoegsICwBsiNlQLRRA6grT8sEWECPAgBdEG49TQzpCa79sUH4BpC/+OekAgBVgk1Ky4B1lwIPxPEHLKD0SoD7ZpAvG4gxYN03hMACQPiLf6rpakDMBrbeJgf/7vmaS4GDk9/bWXQTxG8GgGxg43F6elsdQdgA1v4WCLDKhWcC3NtAfzkAY0C8KQPQe4x/KqkFALKBPhnegrfF12kD4A5g4zP+FbUFBG2g8jlF8FjgskobEJM2gEJlAMgGVrRzfOkIrvBywEnQFoDgTQD/GQCygbXXSapt2IDHG3EBCMojQQYAcoD0Oku4GFzdweCVugAA1bGkIABxDoBLgbV1Aw7kBQCUATRF/KlzAGIE13VH8CzIDSC0LgUJAYjrAMwIrupQICI3gOEyAJADfPaC0FOBNdWCB+IO8BtUiBoAzgG+5wr+EuZ67gaALeDad/zzMDUA2A5ufE8WNIJrSQKPR+oOIHISXFIRoKDOAfA10bVcEo09/LiSzV0gqgwQIgfAP4e7joYgVAEI/wtyfx28ICPAfQ7o/c9XrrQhCCYA7wYAKgJLOgIUXt8ah9gAsc5K4BDEAATNAFAOqNI0hA0IXwk8XIIYAKANKAkJcN8L6gk4r1ZYCYCXAFqCxahCZgCgF6Qo5qzXlwRCJYD7NiBlBoDuBRGo3gqTQKgEAMghaQYAHhSmkD3wd1FPa2sBkKxEngQsAgMVgkhL+LgyASBJAGGLwGAmAE4CAX1gFCoBhLYAQCEoaCau1uQDT2FaQGuwAEAhSJL6wHZQqCdFoOcAaBJA2onAFgDIAX0aLAmcV+MAiRIA0AWgjv99IUhjAsBKIFqNABAlgPttoMkJUAbpBCBJ4LQSAaDaBPe7gNwCBDMB4A3BEKUgdA2IagnuLUBJT4BQJgBsBhxWUQI2VAJQhS4Cg5oA6Jo4fSl4CucAV2EBwnUCYB9IfTUEugZC5QDXYQECmgDoWFA8BBcAMgUE7gIUIQigQ5kAsBlwDe4AqjSYBQjhAQEX2ATcAsQu4BzQAQImKIQHhC6Hd3uRAMgB0AnAfSGsgxAgC7gGwBtyKX9Z6mDzJHCXf2DpRlHLLUBZFkUhP1EUZbkCF9iZr1AbVAKOM96anVdt3TdK67/LJbRWTV+3lR0TuiUWYIi81AJ89ZLQch4PpKM66H6JPlcon3MufA5YAoACkLd1g/wa5vs8ZVO3OZkHHGIvkikMNChtTcBsH9RVba9Gl0g3fVuZrQKZBAAO4K4H1E3F/tsc61laYOUBX/Z9YgwxaIFFK2hWJTwZ++8syKe7QVTPCp6mekBVrWYs9tvYmzq39oBycufrZD7EtBII215g1/Zy7nhUX61EAqJRBzBEP7GDMuRAM88DWkXfjAPaqgwYom85JP2NA/cScCF5WPQ88utp9tF/W3AjDsgZFmBB9N+HNJYLLFxg1zaLhvRFB6pAJwL37wN7fzKya1WyHM1ULZUb3wYqpXAwoEQXxi5wqhjOe718PPJjl/RBJAATgLzWiRuouptVBCBtoNLVeF5kwIkLrBrhaDxvMlAFuRcQgwLgLvyvnzhGgdbIA5Yux4NSQMxoBlfK5XheKdAEeGUE8CxIPSibSNxC42agN/CAhU5cA6SAMHWBbtLj91xZQdcDvd8OPACvg3Me/jeO54YtsDuXVvoYD0gBadgMbrWPAamqob8gDDSB/Cw3mgj0BAFKmfiCKK3KgKrxNSBJfjHknFBCtQZFgJh6k69TUpazm8F5T7pmMXUN6BdNNekBvxUBhfA9IjmvDOhqQbtifivBB+LZDPu7nroKIb1Zf4M8MHUnpFLUC+a3EowTejS5aRFQEtGzGCkDvg+2FvTr5dMGgr8KYbZt9Muti3dIKeYszHcziJ4EzDF/4uUKSPbn+Q1/Xm8JCBsRGD0NmLf9vy6RlAustcdK8GTVSC2fn37/+he/n55L44T9VQSwIsB0+8vyDzCcVwxDMqWBNKgDa3M2ZsASDStk18/weCYYzTVM5TOy1h+TfDZL26rCrwNhb20CPfzEeF5YkBmRQCJf+2lZOiPzLwqUjh80mG1s/d0PfpjXNple7HcSGMzw892zyFNhBvJvOh7TEZWjx0G5MiHRk9mAnue52wNdFxDf+oZT+9h2kzMU70YAPAqa/mvz6JuPqITqwMaw9Td3RE9/zIUgousCIiszc7HfV3xigirHjoKm/lI+/7LB09SSF0AdKI3Sv3y2WKLffwx1wFc30CwDWK62wQRfGQC0ASbSf/H0y3pEE9SS93Wgnk7/wn5ET0XIHBCbJH771X5NdqMT/J+981pvHEeiMHPUR3G5FIN3e5fv/5Qjyh1sIRWIQEh9zsXcjO0uAj8qEQCHD14bQPor03XuzCwa5H9+YhsB/5O2/qfNyKKFUu04ui9C3QS4GY62ivHpB9sGkHmN/tqZS4rAxDYCpOnftJobtKkRyE5pAhiu/t8IDLJiQKO30lvg8RMBnRxctiuy36zYMyu9gJM3Qor3QIOd6VcMuEYL0aJB881Kk9YWkHeDFLlA6+CNUFnJI1tnU1fjHroNX6uffXlwkKTcxEU7OPXDNhFx5WLrbGs1Y7JfbRskTQVqrxHA/sMZDvi0ODDIiMlxtm+QLFmyvyugqPwtf/Xz+V7+hkw6WSFyJ5B6iwCuHm5/vqBGe3cCQzDL/+cimbzFgNqntzVZcsPs0KBuDMghSeNS4uk9wOh0uCWEnzP/XadfEG5uDboK/lnL7wMy/3AfyrycG6TrlZx6SJlBsY/3AGvnXrcwwv8XJqeAHJLYTSbuI4CX4dYiwI9BGgRM83kGWY0BxXnzTy8GvBlELgbGuTsPSasxgLMXqF86X1pp8+/PIGIxMHqzh4ek1X1B+anDTfIBXg3qhqDmn0uAzWYg+yLI73BT8oDVq0FzH0j8l0SBzGUR6He4CQT4NkjZoRhmzwb1DjcFMClA3/nWeGq3hTTgJ65/7gjlDvvAg/fxltdeY+df8tR08W4PkyhVDncD+l9w0hXnf7mpwtL1hAFylwRkAfAt68H2Z5gjDUu3M8yZnHUCmBRgOmW8t3DcrSIsjV0QHil3lgLcglpx1+4sCcJSf0pEYpMSa52A9uyaS1p8D915ugZRkgqHJ3OVAugTPi+Pixju2rZ1XZbZDuMHl9vdmm3/ZsgwDNPntQy3690qSx3BgwFgeQzRrv3SiiMjNDhKAmKDNfe4B4J74H7/LoP2EcnJNADMq+zu+MdlFsZBYNOlceMP0f7RAi0Qro6SgKMpwLKpL7joh5sOBZNJACCesNYz6WaC5H77g3KIpnEjQskUgq2jvQArZaFp3LlDf8T+aAW4at4cTodgOAjAPkT0nS4kexwlAYVuCrAcuayxH9cjAFxJQ33s9sCBdLJ4OdIEWI5caKe+UMRNEpBqdQHm7fB2fjUD84GGxGpyd+RAOMs96gKwHL/OUGHPzcnm8Iae5RrM/q8DvYsWAKNyrI0PGSqpXLSMWkwvs5QxsDnZGJhT3a6FA5Q7AxLHqwcA+UoVs2PmOgCsViwSMsmY0pf+2kCrtVuaxW5AB4D5avGWTtnJXjIA89XaTbaCs8+zi/dBBan1vtq9pVew5ugAWJ1+OQJEAGa7F9nyz+NPDo4IZoTNIKv1S5r5lw1RF9vs4tZgEQIkoxb7FvEuGxod7ApS9wE3NzcicwZ8oSXct4sb8Xd5EwCY3VjEXoG0OSgDGsWgL86+0MAmXyQAVnd3xnPTwfmsFXJhD54tDsqAWpoDzreLQz3nOgQA5vHi1KJFG4DF6TdMvnul2cG2sESWA26u78P/ftOTEoDZ/ScDmMgkB8AxkLtXkmaBxgfE2CMBvtjmzLEKgNXL9xmuGgBsHiz66idH62VAIe6+bhcv+uIEFADc/BikcruDv+XPDMPN+tuAVJTjai7/qk3yPK/r+v7fpK2OdQWkAGgkf9N///+fHz8+Pv71qY+PH5pudyMBoLn8P4foId0R+r1IVut1YCxwgOSHq5I6TrOnUFQWWdrUCXnCFjUAOsv/3+oPUtOdgAgA+vKv8uY+RCUzQnGdV5pOgBmh3FERQHu4to4zWTe6SBvaI/48+S0GQM/ZmgPwpRwQAEC83SapU1meVhYpcZ18IslsCWitvwraH5xyQL7PY1IjukwbyhNepQDMerW/BQD+3EbAB4CSj1byyf+zTuK6oiLJfM66sF0FzpSHa+tU5z1UEasdwU64CADd7F8NQJ3WLYlJAQBX9dJvMo0hoiyTR2YyWH4dVPbsmwBV9t/Xmf5byDsDasIFXVfVaCe9PgD7mOc9xetyjFIGpLY5MC+Z0g/c7NeBBYv3VfVsR51OVssHvF/4ACjSvzxlehkkAAhD/jgCzhqlCkhJevA1fREr3MBovQ5kq0A53HlssgVB8YD9xgNglIfZjNPMogKgtGiPuwwAw6S06LhHTuVMDjfLdaDepyJz4/0HZZzo/IOjPB+tPr2RAQC7Ra3UK3F2haotMnLKtVbGY1gH6nwsOLFyQXEZa/RARtn893UhaGfrAKCwiBOXJKqt3N2W1SEC0Fq7n1oD8UEy/0kmfJ+hB8BukU5ccuggfyNA95OGjYDcn2s7irjgub8kI8YA3C3KjS1KbN7gLg9M32bGbF8okbTc9qcK09ZstL/5WgsARFFcGRnUN5Y/4VBSnbPZ1JDmoYrtf6OoMHECT+HICgBRYeIEEgcfciMuEqN/uaxOejijJffsj+wAQF9zHIdUuhgh2iIxijyUr8U2Th7ueNxl/ZElAO5rLrHhkDwvEscAuHs4zSJU4o+sARCVuQWHZNUJqJE0agVmyuF2+HCHwgDPIHsARGUdiPunG2QEQHrqw+kVvGKDLAKgzWQVOx4h3k3u9nrBscO/TSRcx+n2MS2VNQEgynQq1DZzP0RpdRYAcRSFRUAceQAgyqqg5l9lUO0MAC/zr0NAHHkBgO4D/My/ggAjABptd+uCAFoxUKWRJwAoubeHDJmIpNHbIHGK2aeRP9VG828fABoBSelvhIrWNwA+558UBeLIIwCUPKAtfA6R2AckTgCII68yq3YdAKAmwFf8VxpkBEB+Xv2n5wOayDMAKgKqzPcQpb0/AOrIu4r2+LYXJwAoSuTU/xDFDnaE5KdnN0rACeHWDQDSzTLNCSMkqNmMAEjOz24IK07lbh0BIAlLdXnKEOV+AEijc9QcdbeOABCHpeSc+ecbVNkGoInOUn7Q3boCQPSurCrOGqHUAwBn0b0n3v2x5eYMAEGZHJ82QjwvaRmA8+gWpQHqessdAFyfm5+3RKIysQtAHhLd/CBAiEjuAODtmDl1iXAMMkoC64ACwGPFVUcMcggAJwicu0TYIGDUCEpP72+pggDFIJcAMK+F8pNHiAkCRl27sg2lAhAEAZJBLgF4XiPnBgBeEDBbs2lIAYA1qC1PB+AJyfOXyFNUMm3bNyEFACbG0XpSbgH4VgkEsES+BwHzTSlN7/gEkHYaUOmeSXALwNcDLHURwgh9OcRm40zCz3tSkriMwlDxaVBLPpLkGIA7k4811+dZICMUpZ8I5Ja69mWWpkUUkHaDNAbbOQD7jYfMZZgnr5I0sDk7lRf3AEAAAAIAEACAAAAEACAAAAEACABAAAACABAAgAAABAAgAAABAAgAQAAAAgAQAIAAAAQAIAAAAQAIAEAAAAIAEACAAAAEACAAAAEACABAAAACABAAgAAABAAgAAABAAgAQAAAAgAQAIAAAAQAIAAAAQAIAEAAAAIAEACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAAABAAgAAABAAgAQAAAAgAQAIAAAAQAIAAAAQAIAEAAAAIAEACAAAAEACAAAAEACABAAAACABAAgAAABAAgqyqy9K6sAAB/obI4/z2nbR0XugCoBQACnv2mfZ6uRM4AAHin6a+5E1bVBQD4G9K5WDiXbQoA3j/xy6WTVgKA91aqmMgkAwDvrLhXTVuVAYA3nn/CvPEJAAB/x/oXEgAA3qH862kz1xYA4C3rv8Rg6gDA66uhz10KAN6wAaAxhUkJAN5Ouc7kNQDg7TJArcmrSgDwZqr1Zi8GAG9WArS8ORpu63qbeP8nVwEwrU/aAMCrRYBx6R5aBnUMYAAYuifNAODFasDtz+SNykoQALxdDbB9nb1RVQcAgBdPAZgcbvw+fZMiCQAA75YCzN+nb2VeCACAd1KqcABdx7woKgDAGymWZgDcLAAAvDUA6/P83Z5/IgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMArAnCVHw0qewDw3gBs8qNBmXJf+QIAAlaq3BbOnAxJ5ASpAWgw7AEDcFXO37cYwJ4uvykJijHs4ShTzt8svS2uuShdyAYAAlah9OAde0lAUggDwOWyKMuIFMMeEADPSfzUKSdwvz7+cU1ExrlfqlcDVGDYA1KrOB3MieEPBPI6594vyXqQZ8T6EqMekHJlHdgRL5IV/PqiOF8OnataWQbwYoBQbAS5qq6ZgsLqBDGdvG7WcAFMDcAeL0cbIOw6kE0CNFzARKAHVWBQYi8JYpOAbqICwNSAnBQyw6AHpUSdx/MLAVIJwEaACkVAWGoIMYB3XyAvAHB+s0cOGLhSQiLHawdyekBsAGD7wEgBgu8FcuqAey43HJp/Nnvo0QcMvhV04c3kPGm3gLjJAyJA+J0ArgtQ+YCeN/+c8gERILwYUJEWM6en9zX/n3m/wWYAFSJAeKoJ/ZzPtr4oDPQb9+c5LURsB3uJOoDdFvLLCXC7wuPC/2lOBxFdoBCbgcmFlAc+FvU6PDEwXWfBzy4sLQlG+zXSQH4e+IuB208I+mncZvEPThekgC+bBnLeCn+nYFmWWf4jnACAFDBQNcSyXkcb5auDULguQJgG0MR7f9TiPdALZQHcVztkcTeRIAMItxDgfT1wOE4At3GcwAG8VC/AgAB+xwjnAV6rHSh6wXd0/vEaKGhl3B7fdISAhfunKjQBXy8PFHb5Net/ZIAvGwS0EwHRW2O8BQq/GdDqvOkXlf+CMwSoAF42DRC+7Octf+HmUVQAr5sG7E7gRkFgvgmPECEBeA01ki0/qnpgkWwdxzuAF1GZy3Z9yXKBVXZyAAngexBw6cd15m8Q+Kd9O9hREAbCAJwCk1C8EOMGvfn+T2k2nlfA5dLh+87e/namU+nH56PhANjQKNCtfPx9vT0f9+W9Dpbl/nj+XFceD4ePAJpaAbHpFdj8a9Mv7f9UXWA3+be3AuqB+Vf555oG95nN/23qx0PyH93/tWroDsj/4g/ghoeBOv+3/E/GvzMXgc72P/M0MDv9pygC3/aBavtnWQLf3AqF+FNVAfFrBDt6v/gzzoQlttwMjVFMfmlHgr6Oa+k7+GfvBSUuf4Q/DdI/STcYSplqdG8RdSq9ug8AAAAAAAAAAAAAJPUCjZn5HXujNN4AAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("audit")}
+              type="checkbox"
+              value="audit"
+              className="mx-2"
+            />
+            AUDIT
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://pbs.twimg.com/profile_images/1426624237264162830/ZkNgbHQ2_400x400.jpg"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("newm")}
+              type="checkbox"
+              value="newm"
+              className="mx-2"
+            />
+            NEWM
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://newm.io/wp-content/uploads/2022/06/NEWM_Logo-1536x1536.png"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("ibile")}
+              type="checkbox"
+              value="ibile"
+              className="mx-2"
+            />
+            BLC
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://img1.wsimg.com/isteam/ip/3edea174-bf69-44d9-b5a2-dcd64813a2f8/logo%20jpg%20image%2001%20%2032-32.png/:/rs=w:138,h:138,cg:true,m/cr=w:138,h:138/qt=q:100/ll"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("stripper")}
+              type="checkbox"
+              value="stripper"
+              className="mx-2"
+            />
+            STRIP
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://static.wixstatic.com/media/ff1fbb_3a6f1c588f2640da9532bdee7511ec35~mv2.png/v1/fill/w_100,h_94,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/StripperCoinFRONT%20(1).png"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("cardax")}
+              type="checkbox"
+              value="cardax"
+              className="mx-2"
+            />
+            CDX
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://cdn5.telegram-cdn.org/file/Ik7fVECylgLG35A_DXql00p_zF3MLRsLuAsTmI_bdGra39-_S1OgKjvXpp7fwQl5QOJMvNxBD9OrV9R2FDODKbEeFDJo4TE9LaOx4cfFIBEGsHOHPgwCKess_xdjFOgY5SSzSYL1psXsyRUSbfUZS5gNkxur_DgeSQ071B7J3uUR9cgYgMfu80Q_MGpy5kcNiRW64NxNxPhlg8WxRb5poveFFNd9fGDcjZ54QoxYa7R3jmE0AjUzVITMsbDEAzGQEiNyQUwwG-MZxFfb3kLEUi3IYU_KjTB-TeO8KzXlIJ4CJjRfsuy6GMX8pm0tWFvjgfUaRtYMf0MKQ4k7rcOtFg.jpg"
+              className="mx-1"
+            />
+          </div>
+          <div className="w-[50%] sm:w-[30%] flex items-center">
+            <input
+              onChange={() => handleCheckbox("resi")}
+              type="checkbox"
+              value="resi"
+              className="mx-2"
+            />
+            RESI
+            <img
+              alt="Image"
+              width="25"
+              height="25"
+              draggable="true"
+              src="https://resi.works/wp-content/uploads/2022/06/resi-150x150.png"
               className="mx-1"
             />
           </div>
