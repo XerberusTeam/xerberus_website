@@ -764,7 +764,7 @@ function Form() {
               width="25"
               height="25"
               draggable="true"
-              src="https://cdn5.telegram-cdn.org/file/Ik7fVECylgLG35A_DXql00p_zF3MLRsLuAsTmI_bdGra39-_S1OgKjvXpp7fwQl5QOJMvNxBD9OrV9R2FDODKbEeFDJo4TE9LaOx4cfFIBEGsHOHPgwCKess_xdjFOgY5SSzSYL1psXsyRUSbfUZS5gNkxur_DgeSQ071B7J3uUR9cgYgMfu80Q_MGpy5kcNiRW64NxNxPhlg8WxRb5poveFFNd9fGDcjZ54QoxYa7R3jmE0AjUzVITMsbDEAzGQEiNyQUwwG-MZxFfb3kLEUi3IYU_KjTB-TeO8KzXlIJ4CJjRfsuy6GMX8pm0tWFvjgfUaRtYMf0MKQ4k7rcOtFg.jpg"
+              src="https://icodrops.com/wp-content/uploads/2021/05/Cardax_logo.jpeg"
               className="mx-1"
             />
           </div>
