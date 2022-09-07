@@ -10,7 +10,7 @@ function Hero() {
         <p className="py-5 text-xl text-center">
           Your Risk Manager for Cardano Tokens
         </p>
-        <Link href="https://discord.gg/zSDQNaH5">
+        <Link href="https://discord.gg/cnaWcfewwQ">
           <a target="_blank">
             <button className="py-2 border w-full bg-white text-black text-2xl font-bold">
               Join the Discord
